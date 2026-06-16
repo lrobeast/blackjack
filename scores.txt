@@ -1,0 +1,3 @@
+Lucas : score 10000
+Mario : score 11000
+Jerome : score 12000
