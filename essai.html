@@ -4,6 +4,7 @@
     <title>Blackjack</title>
 </head>
 <body>
+    <input type="text" name="username" placeholder="Ton pseudo" maxlength="20" autofocus autocomplete="off">
     <style>
         body {
             background-color: lightgreen;
@@ -20,10 +21,24 @@
         background-color: rgb(255, 153, 0);
         color:blueviolet
     }
+    login-box{
+         border: 10px ridge red;
+        background-color: yellow;
+         padding: 0.5rem;
+         display: flex;
+    flex-direction: column;
+    }
+    warning p {
+         font: small-caps bold 1.2rem sans-serif;
+        text-align: center;
+    }
     </style>
     <h1>Bienvenue au Blackjack!</h1>
-    <p>Les regles sont simples : depasser 21 et c est perdu.</p>
-    <p>voulez-vous miser ?</p><button>Miser</button>
+    <div class="login-box">
+        <p>Les regles sont simples : depasser 21 et c est perdu.</p>
+        <input type="text" placeholder="miser" maxlength="5">
+        <button>Miser</button>
+    </div>
 </body>
 
 </html>

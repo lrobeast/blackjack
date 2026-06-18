@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Accès restreint</title>
+  <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body class="login-page jyss-login">
+  <div class="login-box jyss-box">
+    <div class="logo">👁️</div>
+    <h1>ACCÈS RESTREINT</h1>
+    <p class="subtitle">Seul le maître de l'univers entre ici</p>
+    <form method="POST">
+      <input type="password" name="password" placeholder="Mot de passe" autofocus autocomplete="off">
+      {% if error %}
+        <p class="error">{{ error }}</p>
+      {% endif %}
+      <button type="submit">Entrer</button>
+    </form>
+  </div>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>👁️ Panneau Jyss</title>
+  <link rel="stylesheet" href="/static/css/style.css">
+  <link rel="stylesheet" href="/static/css/jyss.css">
+</head>
+<body class="jyss-page">
+
+  <header class="jyss-header">
+    <span>👁️ PANNEAU MAÎTRE DE L'UNIVERS</span>
+    <a href="/" class="logout-btn">← Retour au jeu</a>
+  </header>
+
+  <main class="jyss-main">
+
+    <!-- Main croupier -->
+    <section class="jyss-card">
+      <h2>🎰 Main du Croupier</h2>
+      <div id="jyss-dealer-hand" class="hand big-hand"></div>
+      <div id="jyss-dealer-value" class="dealer-val"></div>
+      <div id="jyss-advice" class="advice-box"></div>
+    </section>
+
+    <!-- Tous les joueurs -->
+    <section class="jyss-card">
+      <h2>👥 Tous les joueurs</h2>
+      <div id="jyss-players"></div>
+    </section>
+
+    <!-- Pouvoirs -->
+    <section class="jyss-card powers">
+      <h2>⚡ Pouvoirs</h2>
+      <div class="power-btns">
+        <button class="power-btn normal" onclick="activateMode('normal')">
+          Mode Normal
+          <small>Jeu équitable</small>
+        </button>
+        <button class="power-btn jyss" onclick="activateMode('jyss')">
+          /jyssmode
+          <small>Voir la main du croupier</small>
+        </button>
+        <button class="power-btn super" onclick="activateMode('super')">
+          /superjyssmode
+          <small>Blackjack assuré au prochain deal</small>
+        </button>
+        <button class="power-btn reset" onclick="resetAll()">
+          🔴 Reset total
+          <small>Table + wallets remis à zéro</small>
+        </button>
+      </div>
+      <div id="mode-status" class="mode-status"></div>
+    </section>
+
+    <!-- Logs -->
+    <section class="jyss-card">
+      <h2>📋 Logs secrets</h2>
+      <div id="jyss-logs" class="logs-box"></div>
+      <button class="clear-btn" onclick="clearLogs()">🗑️ /clear — Effacer les traces</button>
+    </section>
+
+  </main>
+
+  <script src="/static/js/jyss.js"></script>
+</body>
+</html>
