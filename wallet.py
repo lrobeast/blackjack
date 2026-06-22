@@ -36,6 +36,7 @@ def get_balance(username):  # ->Permet d avoir la solde du joueur
         wallets[username] = (
             STARTING_BALANCE  # ->on prend son nom et on lui met la solde de depart
         )
+
         save_wallets(wallets)  # ->on enregistre
     return wallets[username]  # ->on renvoi les donnees associe a son nom dans wallet
 
