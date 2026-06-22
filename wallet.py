@@ -47,14 +47,14 @@ def update_balance(
         load_wallets()
     )  # ->reprend la ou le joueur en etait en chargeant les donnees ou creer un nouveau
     if username not in wallets:  # ->si le joueur n est pas dans le wallet alors
-        wallets[username] = (
-            STARTING_BALANCE  # ->on prend son nom et on lui met la solde de depart
-        )
+        wallets[username] = STARTING_BALANCE
+        # ->on prend son nom et on lui met la solde de depart
+
     wallets[username] += amount  # ->on ajoute la somme de l utilisateur a son wallet
     if wallets[username] < 0:  # ->si elle est plus petite que 0
-        wallets[username] = (
-            0  # ->alors elle est egale a 0, impossibilité métier d'avoir des montants negatifs
-    
+        wallets[username] = 0
+        # ->alors elle est egale a 0, impossibilité métier d'avoir des montants negatifs
+
     save_wallets(wallets)  # ->on enregistre
     return wallets[username]  # ->on renvoi les donnees associe a son nom dans wallet
 
