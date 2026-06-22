@@ -18,7 +18,7 @@ def save_wallets(wallets):#->fonction qui permet de sauvegarder ses données
 def get_balance(username):#->Permet d avoir la solde du joueur
     wallets = load_wallets()#->reprend la ou le joueur en etait en chargeant les donnees ou creer un nouveau en appelant l fonction idoine
     if username not in wallets:#->si le joueur n est pas dans le wallet alors
-        wallets[username] = STARTING_BALANCE#->on prend son nom et on lui met la solde de depart
+        wallets[username] = STARTING_BALANCE #->on prend son nom et on lui met la solde de depart
         save_wallets(wallets)#->on enregistre
     return wallets[username]#->on renvoi les donnees associe a son nom dans wallet
 
